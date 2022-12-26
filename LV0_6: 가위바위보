@@ -1,0 +1,30 @@
+def solution(rsp):
+    answer = rsp.translate(str.maketrans('205','052'))
+    return answer
+
+다른 풀이
+1. 딕셔너리 활용
+def solution(rsp):
+    d = {'0':'5','2':'0','5':'2'}
+    return ''.join(d[i] for i in rsp)
+    
+2. replace 함수 활용
+    rsp =rsp.replace('2','s')
+    rsp =rsp.replace('5','p')
+    rsp =rsp.replace('0','r')
+    rsp =rsp.replace('r','5')
+    rsp =rsp.replace('s','0')
+    rsp =rsp.replace('p','2')
+    return rsp
+    
+3. for문
+def solution(rsp):
+    answer = ''
+    for i in list(map(int, rsp)):
+        if i == 0:
+            answer += str(5)
+        elif i == 2:
+            answer += str(0)
+        else:
+            answer += str(2)
+    return answer
