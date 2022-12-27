@@ -1,0 +1,9 @@
+def solution(cipher, code):
+    answer = ''
+    for i in range(len(cipher)//code):
+        answer += cipher[code*(i+1)-1]
+    return answer
+    
+def solution(cipher, code):
+    answer = cipher[code-1::code] # 슬라이싱: lst [start:end:step]
+    return answer
