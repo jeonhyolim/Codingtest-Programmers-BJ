@@ -1,0 +1,24 @@
+def solution(numbers, direction):
+    if direction == "right":
+        pop=numbers.pop(len(numbers)-1)
+        numbers.insert(0,pop)
+    elif direction == "left":
+        last=numbers[0]
+        del numbers[0]
+        numbers.append(last)  
+    return numbers
+-------------
+다른 풀이
+def solution(numbers, direction):
+    return [numbers[-1]] + numbers[:-1] if direction == 'right' else numbers[1:] + [numbers[0]]
+    
+다른 풀이
+from collections import deque
+
+def solution(numbers, direction):
+    numbers = deque(numbers)
+    if direction == 'right':
+        numbers.rotate(1)
+    else:
+        numbers.rotate(-1)
+    return list(numbers)
