@@ -1,0 +1,8 @@
+def solution(num, k):
+    answer = 0
+    if k not in list(map(int, str(num))): # 파이썬 각 자리수 분리 방법: list(map(int, str(num)))
+        answer += -1
+    else:
+        num = list(map(int,str(num)))
+        answer += num.index(k)+1
+    return answer
