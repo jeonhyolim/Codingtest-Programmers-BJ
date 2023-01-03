@@ -11,3 +11,4 @@
 9. (12/28)LV0_9: 가장 큰 수 찾기(.index())
 10. (1/2) LV0_10: 배열 회전시키기(list | .pop(), .insert(위치,값), .append(값)
 11. (1/2) LV0_11: 문자열 정렬하기(2) (.lower(), ''.join(sorted(문자)))
+12. (1/3) LV0_12: 숫자 찾기(list(map(int, str(num))): 각 자리 수 분리 방법, .index(찾을 값))
