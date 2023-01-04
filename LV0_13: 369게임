@@ -1,0 +1,6 @@
+
+def solution(order):
+    answer = 0
+    order=list(map(int, str(order))) # 각 자리수 분리 방법
+    answer = order.count(3) + order.count(6) + order.count(9) # 리스트 내부 특정 숫자 세기
+    return answer
