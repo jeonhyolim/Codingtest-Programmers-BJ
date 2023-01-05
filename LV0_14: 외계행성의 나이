@@ -1,0 +1,6 @@
+def solution(age):
+    answer=''
+    age=list(map(int, str(age)))
+    for i in age:
+        answer+=chr(i+65) # chr(): 아스키코드를 문자열로 변환하는 함수
+    return answer.lower()
