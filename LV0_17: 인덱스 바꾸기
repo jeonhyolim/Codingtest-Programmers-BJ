@@ -1,0 +1,8 @@
+def solution(my_string, num1, num2):
+    answer = ''
+    my_string=list(my_string)
+    a=my_string[num1] # e
+    b=my_string[num2] # l
+    my_string[num1] = b
+    my_string[num2] = a
+    return ''.join(s for s in my_string)
