@@ -10,5 +10,51 @@ def solution(letter):
 
     code_list = letter.split() # 입력 받은 letter를 split해준다
                                # letter=".... . .-.. .-.. ---" =>  letter.split() # ['....', '.', '.-..', '.-..', '---'](letter의 모스부호는 공백으로 나누어져 있습니다.)
-    decode_list = [morse[code] for code in code_list] # ['h', 'e', 'l', 'l', 'o'] : 변환되어서 나옴(딕셔너리에 각각 상응해서)
+    decode_list = [morse[i] for iin code_list] # ['h', 'e', 'l', 'l', 'o'] : 변환되어서 나옴(딕셔너리에 각각 상응해서)
     return "".join(decode_list) # 'hello'
+    
+    
+# 다른 풀이
+1. 한 번에 한 줄로 해결하기
+ 
+def solution(letter):
+    morse = {
+        '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+        '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+        '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+        '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+        '-.--':'y','--..':'z'
+    }
+
+    return ''.join([morse[i] for i in letter.split(' ')])
+
+2. 값을 더해주는 방식으로 for문 구상하기
+
+def solution(letter):
+    answer = ''
+
+    morse = { 
+        '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+        '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+        '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+        '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+        '-.--':'y','--..':'z'
+    }   
+
+    letter_ls = letter.split()
+    for i in letter_ls:
+        answer += morse[i]
+
+    return answer
+
+3. lambda, map 활용하기
+morse = { 
+    '.-':'a','-...':'b','-.-.':'c','-..':'d','.':'e','..-.':'f',
+    '--.':'g','....':'h','..':'i','.---':'j','-.-':'k','.-..':'l',
+    '--':'m','-.':'n','---':'o','.--.':'p','--.-':'q','.-.':'r',
+    '...':'s','-':'t','..-':'u','...-':'v','.--':'w','-..-':'x',
+    '-.--':'y','--..':'z'
+}
+
+def solution(letter):
+    return "".join(map(lambda x: morse[x], letter.split()))
