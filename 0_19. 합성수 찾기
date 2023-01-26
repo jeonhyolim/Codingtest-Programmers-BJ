@@ -1,0 +1,14 @@
+# 풀이1
+def get_divisors(n):
+    return list(filter(lambda v: n % v ==0, range(1, n+1))) # 약수를 반환하는 방법
+    
+    # get_divisors(10) # [1, 2, 5, 10]
+
+def solution(n):
+    return len(list(filter(lambda v: len(get_divisors(v)) >= 3, range(1, n+1)))) 
+    # len(get_divisors(v)) >= 3 약수의 길이가 3 이상인 애들만 해당 범위에서 필터링 해라
+    
+    # solution(10) # 5
+
+# 약수의 개수가 세 개 이상인 수를 합성수
+# 10 이하 합성수는 4, 6, 8, 9, 10 로 5개
