@@ -1,0 +1,15 @@
+def solution(array, n):
+    new_array=[0]*len(array)
+    array=sorted(array)
+    for i in range(len(array)):
+        new_array[i] = abs(array[i]-n)
+    return array[new_array.index(min(new_array))]
+
+# IndexError: list assignment index out of range는 빈 리스트에 인덱스를 지정했을 때 나오는 에러
+
+# 다른 풀이
+
+def solution(array, n):
+    array.sort(key = lambda x : (abs(x-n), x-n))
+    answer = array[0]
+    return answer
