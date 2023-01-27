@@ -1,0 +1,3 @@
+def solution(my_string):
+    return eval(my_string)
+#  eval 함수: 문자열로된 식을 계산
