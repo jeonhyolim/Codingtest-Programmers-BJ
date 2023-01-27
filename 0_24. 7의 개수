@@ -1,0 +1,21 @@
+# array로 [7, 77, 17] 주어지면 여기서 7이 몇 개인지 세는 문제
+
+# 풀이
+def solution(array):
+    array=str(array)
+    result = [array[i:i+1] for i in range(0, len(array), 1)]
+    answer = 0
+    return result.count('7')
+
+# 깔끔한 풀이1
+def solution(array):
+    return str(array).count('7')
+
+# 깔끔한 풀이2
+def solution(array):
+    return ''.join(map(str, array)).count('7')
+
+# 깔끔한 풀이3
+def solution(array):
+    answer = sum([str(i).count("7") for i in array])
+    return answer
