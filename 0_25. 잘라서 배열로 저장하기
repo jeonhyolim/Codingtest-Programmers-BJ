@@ -1,0 +1,4 @@
+def solution(my_str, n):
+    return [my_str[i:i+n] for i in range(0, len(my_str), n)]
+
+# my_str을 n자리씩 나누어서 리스트로 반환하기
