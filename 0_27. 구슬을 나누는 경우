@@ -1,0 +1,11 @@
+import math
+
+def solution(balls, share):
+    up= math.factorial(balls)
+    down=math.factorial(balls-share)*math.factorial(share)
+    return up/down
+
+# 다른 풀이
+def solution(balls, share):
+    return math.comb(balls, share)
+    # 조합 사용하기
