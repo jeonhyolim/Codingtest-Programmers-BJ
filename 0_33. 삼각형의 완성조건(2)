@@ -1,0 +1,2 @@
+def solution(sides):
+    return max(sides)-(max(sides)-min(sides))+sum(sides)-max(sides)-1
