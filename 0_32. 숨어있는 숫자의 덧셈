@@ -1,0 +1,23 @@
+import re
+def solution(my_string):
+    answer = 0
+    my_string=re.findall('\d+',my_string) # 문자열에서 숫자만 분리 ['1', '2', '34']
+    my_string=list(map(int, my_string)) # 리스트의 문자열을 int 형태로 변환 [1, 2, 34]
+    for i in range(len(my_string)):
+        answer = answer+my_string[i]
+    return answer
+
+# findall(pattern, text) 문자열 찾아내기. 일정 패턴의 문자열 찾기
+  pattern: 찾을 문자열의 pattern을 입력하는 부분
+  text: 문자열을 찾을 대상 텍스트를 의미
+
+# 간단한 풀이
+import re
+
+def solution(my_string):
+    return sum([int(i) for i in re.findall(r'[0-9]+', my_string)])
+
+# 다른 풀이
+def solution(my_string):
+    s = ''.join(i if i.isdigit() else ' ' for i in my_string)
+    return sum(int(i) for i in s.split())
