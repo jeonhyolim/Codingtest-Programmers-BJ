@@ -1,0 +1,9 @@
+def solution(spell, dic):
+    answer = 0
+    for i in range(len(dic)):
+        if sorted(spell) == sorted(dic[i]):
+            answer = 1
+            break # 이걸 안쓰면 젤 마지막 것까지 비교해서 !
+        else:
+            answer = 2
+    return answer
