@@ -7,3 +7,10 @@ def solution(spell, dic):
         else:
             answer = 2
     return answer
+
+# return으로 조금 더 깔끔하게
+def solution(spell, dic):
+    for d in dic:
+        if sorted(d) == sorted(spell):
+            return 1
+    return 2
