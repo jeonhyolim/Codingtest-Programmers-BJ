@@ -1,0 +1,9 @@
+def solution(score):
+    summ=[]
+    for i in range(len(score)):
+        summ.append(sum(score[i])/2)
+    sor=sorted(summ, reverse=True)
+    summ2=[]
+    for i in range(len(score)):
+        summ2.append(sor.index(summ[i])+1)
+    return summ2
