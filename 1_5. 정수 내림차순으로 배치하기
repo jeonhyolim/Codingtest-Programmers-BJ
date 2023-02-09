@@ -1,0 +1,5 @@
+def solution(n):
+    a=[]
+    for i in str(n):
+        a.append(i)
+    return int(''.join(sorted(a, reverse=True)))
