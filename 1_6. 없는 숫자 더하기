@@ -1,0 +1,5 @@
+def solution(numbers):
+    s = 0
+    for i in numbers:
+        s += i
+    return 45-s
