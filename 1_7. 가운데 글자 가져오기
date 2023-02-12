@@ -1,0 +1,7 @@
+import math
+def solution(s):
+    if len(s)%2==0: # 짝수
+        answer = s[math.trunc(len(s)/2)-1:math.trunc(len(s)/2+1)]
+    else:
+        answer=s[math.trunc(len(s)/2)]
+    return answer
