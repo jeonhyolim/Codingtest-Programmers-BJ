@@ -1,0 +1,7 @@
+def solution(n):
+    return ''.join(list('수박'*5000)[0:n])
+
+# 다른 사람 풀이
+def water_melon(n):
+    str = "수박"*n # 어차피 n을 받으니까 이렇게 쓰면 되넹
+    return str[:n]
