@@ -1,0 +1,17 @@
+def solution(x, n):
+    answer=[]
+    a=[]
+    for i in range(n):
+        a.append(n)    
+    if x==0:
+        for i, v in enumerate(a):
+            answer.append(0)
+    else:
+        for i in range(x, x*(n+1), x):
+            answer.append(i)
+    return answer
+
+# 다른 풀이
+def number_generator(x, n):
+    # 함수를 완성하세요
+    return [i * x + x for i in range(n)]
