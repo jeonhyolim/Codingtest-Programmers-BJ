@@ -1,0 +1,15 @@
+def solution(a, b):
+    summ=[]
+    if a-b<=0:
+        for i in range(a,b+1):
+            summ.append(i) 
+    else:
+        for i in range(b,a+1):
+            summ.append(i) 
+    return sum(summ)
+
+# 다른 풀이
+def adder(a, b):
+    if a > b:
+        a, b = b, a
+    return sum(range(a, b + 1))
