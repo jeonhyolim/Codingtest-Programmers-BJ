@@ -1,0 +1,5 @@
+# 인덱스 반환
+# 문자열과 숫자 함께 반환하기
+
+def solution(seoul):
+    return str("김서방은 ")+str(seoul.index('Kim'))+str("에 있다")
