@@ -1,0 +1,26 @@
+def solution(arr, divisor):
+    answer = []
+    for i in range(len(arr)):
+        if arr[i]%divisor==0:
+            answer.append(arr[i])
+        else:
+            pass
+    if answer == []:
+        return [-1]
+    return sorted(answer)
+
+# 만약에 길이가 0이라면 [-1]을 반환해라
+  # 길이가 0이라는 것은, 빈 리스트를 내포하므로
+def solution(arr, divisor):
+    arr = [x for x in arr if x % divisor == 0];
+    arr.sort();
+    return arr if len(arr) != 0 else [-1];
+
+
+# or 사용하기
+def solution(arr, divisor): return sorted([n for n in arr if n%divisor == 0]) or [-1]
+  # or 앞이 참일경우 해당 값까지만 , 거짓일경우 뒤에 것까지 호출
+   # 빈 리스트의 경우 false로 인식함
+
+# filter로 풀기
+def solution(arr, divisor): answer = sorted(list(filter(lambda x:x%divisor==0,arr))) or [-1] return answer
