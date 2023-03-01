@@ -1,0 +1,16 @@
+def solution(absolutes, signs):
+    answer = 0
+    for i in range(len(absolutes)):
+        if signs[i]== True:
+            answer+=absolutes[i]*1
+        elif signs[i]==False:
+            answer+=absolutes[i]*-1
+    return answer
+
+# 다른 코드
+
+def solution(absolutes, signs):
+    return sum(absolutes if sign else -absolutes for absolutes, sign in zip(absolutes, signs))
+
+-> zip을 쓰고 -를 붙여서 음으로 뽑게 함, +로 값을 더한게 아니라 sum으로 한 번에 값을 더해
+  * zip: 변수 2개 이상의 for문 생성 가능
