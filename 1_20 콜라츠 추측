@@ -1,0 +1,16 @@
+def solution(n):
+    count = 0
+    if n ==1:
+        return 0
+    else:
+        while n !=1:
+            if n%2==0:
+                n = n/2
+                count += 1
+            elif n%2==1:
+                n = (n*3)+1
+                count += 1
+            if count>500:
+                count = -1 # 내가 틀렸던 부분 count==-1이 아니라, count=-1로 해서 숫자를 대입!(비교연산자 ==은 비교할 때 사용)
+                return count
+        return count
