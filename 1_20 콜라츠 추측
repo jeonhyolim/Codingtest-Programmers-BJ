@@ -14,3 +14,12 @@ def solution(n):
                 count = -1 # 내가 틀렸던 부분 count==-1이 아니라, count=-1로 해서 숫자를 대입!(비교연산자 ==은 비교할 때 사용)
                 return count
         return count
+
+# 다른 풀이
+* 최대 500번이니까 범위 지정해주기
+def collatz(num):
+    for i in range(500):
+        num=num/2 if num%2==0 else num*3+1
+        if num==1:
+            return i+1
+    return -1
