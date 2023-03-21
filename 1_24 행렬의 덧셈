@@ -1,0 +1,23 @@
+import numpy as np
+def solution(arr1, arr2):
+    answer = np.array(arr1)+np.array(arr2) # NumPy array is not JSON serializable 에러
+    return answer.tolist()
+
+# 다른 풀이
+def sumMatrix(A,B):
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            A[i][j] += B[i][j]
+
+    return A
+
+def sumMatrix(A,B):
+    answer = []
+
+    for a, b in zip(A, B):
+        l = []
+        for x, y in zip(a, b):
+            l.append(x + y)
+        answer.append(l)
+
+    return answer
